@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="title.home">OCET GAMES — Independent game studio</title>
+  <meta name="description" content="OCET GAMES is an independent game development studio building web games for CrazyGames and mobile games for Google Play.">
+  <meta name="theme-color" content="#0D0D0F">
+  <link rel="canonical" href="https://ocetgames.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="OCET GAMES">
+  <meta property="og:title" content="OCET GAMES — Independent game studio">
+  <meta property="og:description" content="Small team. Tight mechanics. Built from scratch. Web and mobile games by a two-developer studio.">
+  <meta property="og:url" content="https://ocetgames.com/">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <!-- ===================================================== NAVBAR -->
+  <header class="site-header">
+    <div class="wrap site-header__row">
+      <a class="brand" href="#top" aria-label="OCET GAMES">
+        <svg viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M26 11V6H6v20h20v-5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/>
+          <rect x="13" y="13" width="6" height="6" fill="#FF4D00"/>
+        </svg>
+        <span>OCET <span>GAMES</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Main">
+        <div class="nav__links" id="nav-links">
+          <a href="#games" data-i18n="nav.games">Games</a>
+          <a href="#studio" data-i18n="nav.studio">Studio</a>
+          <a href="#founders" data-i18n="nav.founders">Founders</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="nav__meta">
+          <span class="status mono"><i></i><span data-i18n="nav.status">STATUS: PROTOTYPING</span></span>
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-lang="tr" aria-pressed="false">TR</button>
+          </div>
+          <button class="menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- =================================================== HERO -->
+    <section class="hero" id="top">
+      <div class="wrap hero__grid">
+        <div>
+          <p class="hero__eyebrow mono">
+            <span><b>//</b> <span data-i18n="hero.eyebrow1">Independent game studio</span></span>
+            <span data-i18n="hero.eyebrow2">Est. 2026</span>
+          </p>
+          <h1>
+            <span data-i18n="hero.h1a">Small team.</span>
+            <span data-i18n="hero.h1b">Tight mechanics.</span>
+            <span class="hl" data-i18n="hero.h1c">Built from scratch.</span>
+          </h1>
+          <p class="hero__sub" data-i18n="hero.sub">
+            <strong>OCET GAMES</strong> is an independent game development studio. We make web games for CrazyGames and mobile games for Google Play: short sessions, responsive controls, no filler.
+          </p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#games" data-i18n="hero.cta1">Explore Pipeline</a>
+            <a class="btn" href="#contact" data-i18n="hero.cta2">Get in Touch</a>
+          </div>
+        </div>
+
+        <aside class="sheet mono" aria-label="Studio build sheet">
+          <div class="sheet__bar"><b>studio.cfg</b><span>v0.1.0</span></div>
+          <dl>
+            <div><dt data-i18n="sheet.team">Team</dt><dd data-i18n="sheet.team.v">2 developers</dd></div>
+            <div><dt data-i18n="sheet.platforms">Platforms</dt><dd>Web · Android</dd></div>
+            <div><dt data-i18n="sheet.targets">Targets</dt><dd>CrazyGames · Google Play</dd></div>
+            <div><dt data-i18n="sheet.pipeline">In pipeline</dt><dd data-i18n="sheet.pipeline.v">2 projects</dd></div>
+            <div><dt data-i18n="sheet.released">Released</dt><dd data-i18n="sheet.released.v">0 (so far)</dd></div>
+            <div><dt data-i18n="sheet.status">Status</dt><dd class="is-accent" data-i18n="sheet.status.v">Prototyping</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- =================================================== GAMES -->
+    <section class="section" id="games">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__label mono"><b>01</b><span data-i18n="games.label">Development pipeline</span></p>
+          <h2 data-i18n="games.h2">Nothing shipped yet. Here's what's on the bench.</h2>
+          <p data-i18n="games.lead">We're a new studio, so there are no released titles to show. These are the two projects we're building right now. Names, footage and release dates will show up here when they're real.</p>
+        </div>
+
+        <div class="games-grid">
+
+          <!-- START GAME CARD TEMPLATE: Copy and paste this block to add a new game -->
+          <!--
+            HOW TO EDIT:
+            - Change the text inside each tag.
+            - Status tag: keep class="tag tag--live" for the orange "in development" look,
+              or use class="tag" for a neutral gray tag (e.g. RELEASED, ON HOLD).
+            - Key art: replace the <span> inside .game-card__art with
+              <img src="images/your-game.jpg" alt="Your game title">
+            - Store link: add  <a class="btn" href="https://...">Play now</a>  after the </dl>.
+            - data-i18n="..." attributes are only for the Turkish translation. On a new card
+              you can delete them, or use new keys and add them to the TR list in app.js.
+          -->
+          <article class="game-card">
+            <div class="game-card__art" aria-hidden="true">
+              <span class="mono" data-i18n="games.noart">No public footage yet</span>
+            </div>
+            <div class="game-card__body">
+              <div class="game-card__top">
+                <span class="game-card__id mono" data-i18n="g1.id">Project 01</span>
+                <span class="tag tag--live" data-i18n="games.status">In development</span>
+              </div>
+              <h3 data-i18n="g1.title">WebGL Arcade Title</h3>
+              <p data-i18n="g1.desc">A fast arcade game for the browser. Loads in seconds, plays on keyboard or touch, and is built around runs that last a few minutes.</p>
+              <dl class="spec mono">
+                <div><dt data-i18n="spec.platform">Platform</dt><dd data-i18n="g1.platform">Web (WebGL)</dd></div>
+                <div><dt data-i18n="spec.target">Target</dt><dd>CrazyGames</dd></div>
+                <div><dt data-i18n="spec.stage">Stage</dt><dd data-i18n="g1.stage">Prototype</dd></div>
+              </dl>
+            </div>
+          </article>
+          <!-- END GAME CARD TEMPLATE -->
+
+          <article class="game-card">
+            <div class="game-card__art" aria-hidden="true">
+              <span class="mono" data-i18n="games.noart">No public footage yet</span>
+            </div>
+            <div class="game-card__body">
+              <div class="game-card__top">
+                <span class="game-card__id mono" data-i18n="g2.id">Project 02</span>
+                <span class="tag tag--live" data-i18n="games.status">In development</span>
+              </div>
+              <h3 data-i18n="g2.title">Mobile Action Title</h3>
+              <p data-i18n="g2.desc">An action game designed for phones first. One-thumb controls, quick restarts, and a core loop we're tuning until it feels right in the hand.</p>
+              <dl class="spec mono">
+                <div><dt data-i18n="spec.platform">Platform</dt><dd data-i18n="g2.platform">Mobile (Android)</dd></div>
+                <div><dt data-i18n="spec.target">Target</dt><dd>Google Play</dd></div>
+                <div><dt data-i18n="spec.stage">Stage</dt><dd data-i18n="g2.stage">Prototype</dd></div>
+              </dl>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="games-note mono"><b>//</b> <span data-i18n="games.note">Working titles. Details change as prototypes do.</span></p>
+      </div>
+    </section>
+
+    <!-- =================================================== STUDIO -->
+    <section class="section" id="studio">
+      <div class="wrap">
+        <div class="section__head">
+          <p class="section__label mono"><b>02</b><span data-i18n="studio.label">Studio</span></p>
+          <h2 data-i18n="studio.h2">Two developers, one desk's worth of opinions.</h2>
+        </div>
+
+        <div class="studio-grid">
+          <div class="studio-note">
+            <p data-i18n="studio.p1">OCET GAMES is a founding team of two developers. We design, code and test everything ourselves.</p>
+            <p data-i18n="studio.p2">Our process is simple: get a playable prototype running in days, put it in front of people, and keep only what's fun. If the core mechanic doesn't hold up with gray boxes, art won't save it.</p>
+            <p data-i18n="studio.p3">We care about how a game feels to play and about code we can still read six months later. Both matter when the team is this small.</p>
+          </div>
+
+          <ul class="principles">
+            <li>
+              <span class="mono">A.</span>
+              <div>
+                <h3 data-i18n="pr1.t">Rapid prototyping</h3>
+                <p data-i18n="pr1.d">Small playable builds, tested early. Ideas get cut fast so the good ones get more time.</p>
+              </div>
+            </li>
+            <li>
+              <span class="mono">B.</span>
+              <div>
+                <h3 data-i18n="pr2.t">Gameplay feel</h3>
+                <p data-i18n="pr2.d">Input response, timing, feedback. We tune the first ten seconds until they're worth repeating.</p>
+              </div>
+            </li>
+            <li>
+              <span class="mono">C.</span>
+              <div>
+                <h3 data-i18n="pr3.t">Clean engineering</h3>
+                <p data-i18n="pr3.d">Lean builds, quick load times, and code that's easy to change when a design changes.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ================================================= FOUNDERS -->
+        <div class="founders" id="founders">
+          <div class="founders__head">
+            <h2 data-i18n="founders.h2">Founders</h2>
+            <span class="mono" data-i18n="founders.count">Team size: 02</span>
+          </div>
+
+          <div class="founders-grid">
+            <article class="founder">
+              <div class="founder__mark" aria-hidden="true">ETK</div>
+              <div>
+                <h3>Enes Taha Kurnaz</h3>
+                <p class="founder__role mono" data-i18n="founders.role">Co-Founder &amp; Developer</p>
+                <div class="founder__links">
+                  <a href="mailto:enestahakurnaz@ocetgames.com">enestahakurnaz@ocetgames.com</a>
+                  <a href="https://www.linkedin.com/in/enes-taha-kurnaz-a88742388/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="founder">
+              <div class="founder__mark" aria-hidden="true">OCE</div>
+              <div>
+                <h3>Osman Can Ekiz</h3>
+                <p class="founder__role mono" data-i18n="founders.role">Co-Founder &amp; Developer</p>
+                <div class="founder__links">
+                  <a href="mailto:osmancanekiz@ocetgames.com">osmancanekiz@ocetgames.com</a>
+                  <a href="https://www.linkedin.com/in/osman-can-ekiz-8703a5301/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================================================== CONTACT -->
+    <section class="section" id="contact">
+      <div class="wrap contact-grid">
+        <div class="contact-intro">
+          <p class="section__label mono"><b>03</b><span data-i18n="contact.label">Contact</span></p>
+          <h2 data-i18n="contact.h2">Publishers, platforms, players: write to us.</h2>
+          <p data-i18n="contact.lead">For publishing and partnership questions, use the general address. To reach one of us directly, use a personal one. We read everything.</p>
+          <a class="btn btn--primary" href="https://wa.me/905055158050" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H10l-6 5V4Z" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+            <span data-i18n="contact.wa">Message on WhatsApp</span>
+          </a>
+          <small class="mono" data-i18n="contact.wa.note">Opens a direct chat in a new tab</small>
+        </div>
+
+        <div class="contact-list">
+          <div class="contact-row">
+            <div>
+              <p class="contact-row__label mono" data-i18n="contact.general">General &amp; publishing inquiries</p>
+              <a href="mailto:iletisim@ocetgames.com">iletisim@ocetgames.com</a>
+            </div>
+            <button class="copy-btn" type="button" data-copy="iletisim@ocetgames.com" data-i18n="copy">Copy</button>
+          </div>
+          <div class="contact-row">
+            <div>
+              <p class="contact-row__label mono">Enes Taha Kurnaz</p>
+              <a href="mailto:enestahakurnaz@ocetgames.com">enestahakurnaz@ocetgames.com</a>
+            </div>
+            <button class="copy-btn" type="button" data-copy="enestahakurnaz@ocetgames.com" data-i18n="copy">Copy</button>
+          </div>
+          <div class="contact-row">
+            <div>
+              <p class="contact-row__label mono">Osman Can Ekiz</p>
+              <a href="mailto:osmancanekiz@ocetgames.com">osmancanekiz@ocetgames.com</a>
+            </div>
+            <button class="copy-btn" type="button" data-copy="osmancanekiz@ocetgames.com" data-i18n="copy">Copy</button>
+          </div>
+          <div class="contact-row">
+            <div>
+              <p class="contact-row__label mono" data-i18n="contact.domain">Official domain</p>
+              <a href="https://ocetgames.com">ocetgames.com</a>
+            </div>
+            <button class="copy-btn" type="button" data-copy="ocetgames.com" data-i18n="copy">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================== FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="site-footer__row">
+        <a class="brand" href="#top" aria-label="OCET GAMES">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <path d="M26 11V6H6v20h20v-5" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/>
+            <rect x="13" y="13" width="6" height="6" fill="#FF4D00"/>
+          </svg>
+          <span>OCET <span>GAMES</span></span>
+        </a>
+        <nav class="site-footer__links" aria-label="Footer">
+          <a href="#games" data-i18n="nav.games">Games</a>
+          <a href="#studio" data-i18n="nav.studio">Studio</a>
+          <a href="#founders" data-i18n="nav.founders">Founders</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <a class="is-strong" href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        </nav>
+      </div>
+      <div class="site-footer__base mono">
+        <span data-i18n="footer.copy">© 2026 OCET GAMES. All rights reserved.</span>
+        <span>ocetgames.com</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
